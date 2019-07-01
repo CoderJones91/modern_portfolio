@@ -70,7 +70,14 @@
 }
 
 .projects {
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr);
+}
+.contact-form-and-map {
+    grid-template-areas: 
+    'form'
+    'map';
+    grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
 }
 
 }
@@ -93,5 +100,11 @@
       }
       .boxes div {
         font-size: 1rem;
+    }
+    .contact-form-and-map {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'form'
+        'map';
     }
     }
