@@ -88,7 +88,9 @@
         #home h1 {
           margin-top: 10vh;
         }
-    
+        .small-heading{
+            display: block;
+        }
         .lg-heading {
           margin-top:1rem;
           font-size: 5rem;
@@ -108,3 +110,11 @@
         'map';
     }
     }
+@include mediaSmLand {
+    .menu .nav-link{
+       display: initial;
+    }
+    body {
+        line-hieght: 1.6rem;
+    }
+}

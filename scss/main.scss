@@ -33,8 +33,7 @@ h3 {
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
     border-radius: 10px;
-    width: 800px;
-    
+    display: inline;
   }
 }
 
@@ -59,7 +58,7 @@ main {
   min-height: calc(100vh - 4rem;
 
   .icons {
-    margin-top: 1rem;
+    margin-top: 2rem;
     
 
     a {
@@ -84,6 +83,7 @@ main {
 
 // About
 .about-info {
+    margin-top: 2rem;
     display: grid;
     grid-gap: 30px;
     grid-template-areas: 
@@ -120,6 +120,7 @@ main {
 
 // Work/Projects
 .projects {
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.1rem;

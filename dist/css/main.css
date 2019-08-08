@@ -6,19 +6,33 @@
   cursor: pointer;
   transition: all 0.6s ease-out; }
   .menu-btn .btn-line {
-    width: 28px;
-    height: 3px;
+    height: 0.1875rem;
     margin: 0 0 5px 0;
     background: #fff;
     transition: all 0.6s ease-out; }
+    .menu-btn .btn-line:nth-child(1) {
+      width: 2rem; }
+    .menu-btn .btn-line:nth-child(2) {
+      width: 1.425rem; }
+    .menu-btn .btn-line:nth-child(3) {
+      width: 1.025rem; }
+    .menu-btn .btn-line:nth-child(4) {
+      display: none; }
   .menu-btn.close {
     transform: rotate(180deg); }
-    .menu-btn.close .btn-line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px); }
-    .menu-btn.close .btn-line:nth-child(2) {
-      opacity: 0; }
-    .menu-btn.close .btn-line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px); }
+    .menu-btn.close .btn-line {
+      background: red; }
+      .menu-btn.close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px); }
+      .menu-btn.close .btn-line:nth-child(2) {
+        opacity: 0; }
+      .menu-btn.close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+        display: none; }
+      .menu-btn.close .btn-line:nth-child(4) {
+        transform: rotate(-45deg) translate(7px, -6px);
+        width: 2rem;
+        display: block; }
 
 .menu {
   position: fixed;
@@ -77,6 +91,8 @@
     transition: all 0.6s ease-out; }
     .menu .nav-link:hover {
       color: turquoise; }
+  .menu .nav-link.contact {
+    margin-bottom: 1rem; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -132,7 +148,7 @@ h3 {
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5);
     border-radius: 10px;
-    width: 800px; }
+    display: inline; }
 
 a {
   color: white;
@@ -150,7 +166,7 @@ main {
   padding: 4rem;
   min-height: calc(100vh - 4rem); }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: 2rem; }
     main .icons a {
       padding: 0.4rem;
       color: #fff; }
@@ -163,6 +179,7 @@ main {
       margin-top: 20vh; }
 
 .about-info {
+  margin-top: 2rem;
   display: grid;
   grid-gap: 30px;
   grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
@@ -187,6 +204,7 @@ main {
     border-bottom: turquoise 3px solid; }
 
 .projects {
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.1rem; }
@@ -394,6 +412,8 @@ input:-webkit-autofill:active {
     padding: 2rem; }
     main #home h1 {
       margin-top: 10vh; }
+    main .small-heading {
+      display: block; }
     main .lg-heading {
       margin-top: 1rem;
       font-size: 5rem; }
@@ -404,3 +424,9 @@ input:-webkit-autofill:active {
   .contact-form-and-map {
     grid-template-columns: 1fr;
     grid-template-areas: 'form' 'map'; } }
+
+@media screen and (max-width: 667px) and (max-height: 375px) {
+  .menu .nav-link {
+    display: initial; }
+  body {
+    line-hieght: 1.6rem; } }

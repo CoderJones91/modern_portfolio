@@ -8,18 +8,33 @@
   @include easeOut;
 
   .btn-line {
-    width: 28px;
-    height: 3px;
+    
+    height: 0.1875rem;
     margin: 0 0 5px 0;
     background: set-text-color($primary-color);
     @include easeOut;
-  }
+  
+    &:nth-child(1) {
+        width: 2rem;
+      }
+      &:nth-child(2) {
+        width: 1.425rem;
+      }  
+      &:nth-child(3) {
+        width: 1.025rem;
+      }  
+      &:nth-child(4) {
+        display: none;
+      }  
+
+}
 
   // Rotate Into X W/ Menu Lines
   &.close {
     transform: rotate(180deg);
 
     .btn-line {
+        background: red;
       // Line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
@@ -31,10 +46,22 @@
       }
 
       // Line 3 - Rotate
-      &:nth-child(3) {
-          transform: rotate(-45deg) translate(7px, -6px);
+      &:nth-child(3) { 
+        transform: rotate(-45deg) translate(7px, -6px);
+        display: none
+        
+          
+      }
+      &:nth-child(4) { 
+        transform: rotate(-45deg) translate(7px, -6px);
+        width: 2rem;
+        display: block;
+        
+          
       }
     }
+
+
   }
 
 }
@@ -131,6 +158,9 @@
             color: $secondary-color;
         }
 
+    }
+    .nav-link.contact {
+      margin-bottom: 1rem;
     }
 
 }
